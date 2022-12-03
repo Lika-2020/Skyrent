@@ -60,7 +60,7 @@ document.querySelectorAll('.price__input').forEach(
 
             const p = document.createComment('p');
             p.classList.add('product-content__text');
-            p.textContent = 
+            p.textContent = 'Привет';
 
 
 
