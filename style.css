@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@media (min-width: 320px) {
+  .container {
+    max-width: 380px;
+  }
+  .center {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 43px;
+  }
+  .logo__title {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 17px;
+    margin-bottom: 20px;
+  }
+  .logo__text {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #727883;
+  }
+  .top-content__subtitle {
+    margin-top: 33px;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 43px;
+    margin-bottom: 7px;
+  }
+  .top-content__text {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 350;
+    font-size: 20px;
+    line-height: 33px;
+    color: #727883;
+  }
+  .top-content__button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    width: 330px;
+    height: 49px;
+    background: #D9D9D9;
+    border-radius: 4px;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 17px;
+    margin-top: 38px;
+    border: none;
+    font-weight: bold;
+  }
+  .product-content {
+    margin-top: 41px;
+    padding-bottom: 34px;
+  }
+  .product-content__img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .product-content__name {
+    color: #000000;
+  }
+  .product-content__heading {
+    margin-top: 25px;
+    margin-bottom: 17px;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 17px;
+  }
+  .product-content__text {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    color: #727883;
+  }
+  .product-content__price {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 17px;
+    color: #000000;
+  }
+  .product-content__description {
+    margin-bottom: 32px;
+  }
+  .footer-logo {
+    margin-top: 34px;
+    margin-bottom: 40px;
+  }
+  .filter {
+    display: none;
+  }
+  .filter__button {
+    width: 230px;
+    height: 49px;
+    background: #D9D9D9;
+    border-radius: 4px;
+    margin-top: 25px;
+    border: none;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: bold;
+  }
+  .content {
+    margin-top: 36px;
+    border: none;
+    height: 260px;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .select {
+    padding-top: 29px;
+    padding-bottom: 20px;
+  }
+  .select__dropdown {
+    width: 230px;
+    border: none;
+    outline: 1px solid #D9D9D9;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    border-radius: 4px;
+    padding-left: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 57px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-image: url(./img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position: right 20px center;
+  }
+  .price {
+    display: flex;
+    justify-content: center;
+    gap: 21px;
+  }
+  .price__input {
+    width: 90px;
+    border: none;
+    outline: 1px solid #D9D9D9;
+    border-radius: 4px;
+    padding-left: 14px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    width: 90px;
+  }
+  ::-moz-placeholder {
+    color: #D9D9D9;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+  }
+  :-ms-input-placeholder {
+    color: #D9D9D9;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+  }
+  ::placeholder {
+    color: #D9D9D9;
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+  }
+  input[type=number] {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 17px;
+    color: #D9D9D9;
+  }
+}/*# sourceMappingURL=style.css.map */
