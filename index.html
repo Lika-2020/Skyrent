@@ -13,8 +13,12 @@
     <div class="container">
         <header class="header center">
             <div class="logo">
-                <h2 class="logo__title">SKYRENT</h2>
-                <p class="logo__text">О проекте</p>
+                <a class="logo__link" href="index.html">
+                    <h2 class="logo__title">SKYRENT</h2>
+                </a>
+                <a href="index.html">
+                    <p class="logo__text">О проекте</p>
+                </a>
             </div>
         </header>
         <div class="top-content center">
@@ -28,22 +32,18 @@
 
                 <div class="select">
                     <select id="сountry-city" name="сountry-city" class="select__dropdown">
-                        <option value="CC">Страна и город</option>
-                        <option value="GB">Germany → Berlin</option>
-                        <option value="CP">Czech Republic → Prague</option>
-                        <option value="MA">Madagascar → Antananarivo</option>
+                        <option>Страна и город</option>
+                     
                     </select>
                 </div>
 
                 <div class="price">
-                    <input class="price__input" placeholder="Цена от" maxlength="9" minlength="2" required>
-                    <input class="price__input" placeholder="Цена до" maxlength="9" minlength="2" required>
+                    <input id="from" class="price__input" placeholder="Цена от" maxlength="9" minlength="2" required>
+                    <input id="to" class="price__input" placeholder="Цена до" maxlength="9" minlength="2" required>
 
                 </div>
 
                 <button class="filter__button">Подобрать</button>
-
-
 
             </div>
             <div class="top-content__button">
@@ -54,62 +54,13 @@
 
 
 
-        <section class="product-content center">
-            <div class="product-content__img">
-                <a href="detailed-information.html">
-                    <img src="./img/product_1.jpg" alt="photo product" width="330" height="354">
-                </a>
-            </div>
-            
-            <div class="product-content__description">
-                <a class="product-content__name" href="detailed-information.html">
-                    <h3 class="product-content__heading">Germany → Berlin</h3>
-                </a>
-                <p class="product-content__text"> Offering an exclusive Executive club and spacious rooms,
-                    this stylish hotel stands beside the River Spree on Berlin’s
-                    Friedrichstraße shopping street.
-                </p>
-                <span class="product-content__price">$ 500 / month</span>
-            </div>
-
-            <div class="product-content__img">
-                <a href="detailed-information.html">
-                    <img src="./img/product_2.jpg" alt="photo product" width="330" height="354">
-                </a>
-            </div>
-            <div class="product-content__description">
-                <a class="product-content__name" href="detailed-information.html">
-                    <h3 class="product-content__heading">Czech Republic → Prague</h3>
-                </a>
-                <p class="product-content__text"> Located next to Malesicky Park, a&o Prague Rhea
-                    is only 200 metres from the Zborov Tram Station and a 20-minute tram ride away
-                    from the historical city centre of Prague.
-                </p>
-                <span class="product-content__price">$ 300 / month</span>
-            </div>
-
-
-            <div class="product-content__img">
-                <a href="detailed-information.html">
-                    <img src="./img/product_3.jpg" alt="photo product" width="330" height="354">
-                </a>
-            </div>
-            <div class="product-content__description">
-                <a class="product-content__name" href="detailed-information.html">
-                    <h3 class="product-content__heading">Madagascar → Antananarivo</h3>
-                </a>
-                <p class="product-content__text"> This hotel offers free Wi-Fi, a stylish lounge-bar
-                    and modern rooms with a flat-screen TV. The famous KaDeWe department store
-                    is a 5-minute walk away.
-                </p>
-                <span class="product-content__price">$ 300 / month</span>
-            </div>
-
-        </section>
+        <section class="product-content center"></section>
 
         <footer class="footer center">
             <div class="footer-logo">
-                <h2 class="logo__title">SKYRENT</h2>
+                <a class="logo__link" href="index.html">
+                    <h2 class="logo__title">SKYRENT</h2>
+                </a>
                 <p class="logo__text">2022</p>
             </div>
         </footer>
@@ -117,9 +68,10 @@
 
 
 
-
-    
-    <script src="./index.js"></script>
     <script src="./lib/request.js"></script>
+    <script src="./index.js"></script>
+
+
 </body>
+
 </html>

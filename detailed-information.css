@@ -7,15 +7,24 @@ a {
   text-decoration: none;
 }
 
+a {
+  color: #000000;
+}
+
+.img-content {
+  width: 330px;
+  height: 354px;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-@media (max-width: 380px) {
+@media (min-width: 320px) {
   .container {
-    min-width: 320px;
+    max-width: 380px;
   }
   .center {
     padding-left: 25px;
@@ -104,7 +113,6 @@ a {
     background-image: url(./img/tick.svg);
     background-repeat: no-repeat;
     background-position: left;
-    position: absolute;
     top: 0;
     right: 0;
     color: black;

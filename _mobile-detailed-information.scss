@@ -7,6 +7,15 @@ a {
     text-decoration: none;
 }
 
+a {
+    color: #000000;
+}
+
+.img-content {
+
+    width: 330px;
+    height: 354px;
+}
 
 .container {
     width: 100%;
@@ -19,11 +28,11 @@ a {
 
 
 
-@media (max-width: 380px) {
-    .container {
-        min-width: 320px;
-    }
 
+@media (min-width: 320px) {
+    .container {
+        max-width: 380px;
+    }
 
 
     .center {
@@ -125,6 +134,8 @@ a {
         list-style: none;
     }
 
+    
+
     ol>li {
         padding-left: 33px;
         position: relative;
@@ -135,7 +146,6 @@ a {
         background-image: url(./img/tick.svg);
         background-repeat: no-repeat;
         background-position: left;
-        position: absolute;
         top: 0;
         right: 0;
         color: black;
@@ -152,12 +162,12 @@ a {
 
     .detailed-information {
         &__button {
-     
+
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-        
+
         }
 
         &__title {

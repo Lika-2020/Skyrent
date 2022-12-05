@@ -7,6 +7,11 @@ a {
     text-decoration: none;
 }
 
+a {
+    color: #000000;
+}
+
+
 
 .container {
     width: 100%;
@@ -117,10 +122,6 @@ a {
             justify-content: center;
         }
 
-        &__name {
-            color: #000000;
-        }
-
         &__heading {
             margin-top: 25px;
             margin-bottom: 17px;
@@ -159,8 +160,14 @@ a {
 
     }
 
+    img {
+        width: 330px;
+        height: 354px;
+    }
 
-
+    .hide {
+        display: none;
+    }
 
 
 
@@ -189,6 +196,10 @@ a {
             line-height: 17px;
             font-weight: bold;
         }
+    }
+
+    .btn-color {
+      background: #F6F6F6;
     }
 
 

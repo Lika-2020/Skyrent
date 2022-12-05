@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+a {
+  color: #000000;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -88,9 +92,6 @@ a {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .product-content__name {
-    color: #000000;
-  }
   .product-content__heading {
     margin-top: 25px;
     margin-bottom: 17px;
@@ -120,6 +121,13 @@ a {
   .product-content__description {
     margin-bottom: 32px;
   }
+  img {
+    width: 330px;
+    height: 354px;
+  }
+  .hide {
+    display: none;
+  }
   .footer-logo {
     margin-top: 34px;
     margin-bottom: 40px;
@@ -140,6 +148,9 @@ a {
     font-size: 16px;
     line-height: 17px;
     font-weight: bold;
+  }
+  .btn-color {
+    background: #F6F6F6;
   }
   .content {
     margin-top: 36px;
