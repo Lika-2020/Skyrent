@@ -1,11 +1,14 @@
 const container = document.querySelector('.container');
 const topContent = document.querySelector('.top-content');
 const button = document.querySelector('.top-content__button');
-const containerFilter = document.querySelector('.filter');
-const select = document.querySelector('.select__dropdown');
-const inputIn = document.querySelectorAll('.price__input');
-const btn = document.querySelector('.filter__button');
-
+const form = document.querySelector('.form');
+const containerFilter = form.querySelector('.filter');
+const divSelect = containerFilter.querySelector('.select');
+const select = divSelect.querySelector('.select__dropdown');
+const divInput = form.querySelector('.price');
+const divFieldForm = divInput.querySelector('.field__form');
+const inputIn = divInput.querySelectorAll('.field__control');
+const btn = form.querySelector('.filter__button');
 
 
 
@@ -19,6 +22,8 @@ button.addEventListener('click', () => {
 inputIn.forEach(
     item => item.addEventListener('keydown', function (event) {
 
+        btn.disabled = false;
+
         let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'Backspace', 'Delete'];
         const key = event.key;
         if (arr.includes(key)) {
@@ -26,13 +31,16 @@ inputIn.forEach(
         } else {
             event.preventDefault();
         }
+
     })
+
 );
 
 
 const section = document.querySelector('.product-content');
 
 const OFFERS = 'http://45.8.249.186/offers/';
+
 
 request({
 
@@ -110,29 +118,33 @@ select.addEventListener('change', () => {
 })
 
 let selectValue = '';
-btn.addEventListener('click', () => {
+
+
+
+btn.addEventListener('click', (event) => {
+    event.preventDefault();
     btn.classList.add('btn-color');
     selectValue = select.value;
+    const minVal = +inputIn[0].value;
+    const maxVal = +inputIn[1].value;
 
 
     request({
         url: OFFERS,
         onSuccess: (data) => {
 
-            filterSearch(data);
-
-            /* const filtered = data.filter(data => data.country + ' ' + '→' + ' ' + data.city === value);
-             console.log(filtered);*/
+            filterSearch(data, selectValue, minVal, maxVal);
 
         }
     });
 
 });
 
-function filterSearch(data) {
+function filterSearch(data, selectValue, minVal, maxVal) {
+
     const rgx = new RegExp(selectValue);
     let filtered = data.filter(card => {
-        if (rgx.test(card.country + ' ' + '→' + ' ' + card.city)) {
+        if (rgx.test(card.country + ' ' + '→' + ' ' + card.city) && (card.price > minVal && card.price < maxVal)) {
             return true;
         } else {
             return false;
@@ -180,32 +192,16 @@ function filterSearch(data) {
 
     });
 
-    console.log(filtered);
+   
 
 }
 
 
 
 
-/*function renderInput(data) {
-    inputIn.forEach(input => {
-        input.addEventListener("input", () => {
-            let minVal = inputIn[0].value;
-            let maxVal = inputIn[1].value;
-            console.log(minVal, maxVal);
 
-            if (maxVal - minVal < data.price) {
-                minVal = maxVal - data.price;
 
-            } else {
-                maxVal = minVal - data.price;
-            }
 
-        })
-    });
-
-}*/
-//renderInput(data);
 
 
 
