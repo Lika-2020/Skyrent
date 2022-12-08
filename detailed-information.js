@@ -23,7 +23,7 @@ back.addEventListener('click', () => {
 const section = document.querySelector('.product-content');
 const sectionDetailedInformation = document.querySelector('.detailed-information');
 
-const OFFER = `http://45.8.249.186/offers/${id}`;
+const OFFER = `https://skyrent-server.ru/offers/${id}`;
 
 request({
 
@@ -77,7 +77,7 @@ request({
         contactName.textContent = 'Имя хоста';
 
         const contactText = document.createElement('span');
-        contactText.classList.add('.contact__text');
+        contactText.classList.add('contact__text');
         contactText.textContent = data.host_name;
 
         const contactNamePhone = document.createElement('p');
@@ -121,12 +121,5 @@ request({
 
 
 
-/*
 
-/*<div class="contact">
-    <p class="contact__name">Имя хоста</p><span class="contact__text">Eustolia A. Daniel</span>
 
-    <p class="contact__name">Телефон</p><span class="contact__text">267-936-7078</span>
-
-    <p class="contact__name">Адрес</p><span class="contact__text">2310 Marigold Lane FL 33131</span>
-</div>*/

@@ -39,7 +39,7 @@ inputIn.forEach(
 
 const section = document.querySelector('.product-content');
 
-const OFFERS = 'http://45.8.249.186/offers/';
+const OFFERS = 'https://skyrent-server.ru/offers/';
 
 
 request({
@@ -159,7 +159,7 @@ function filterSearch(data, selectValue, minVal, maxVal) {
         productContentImg.classList.add('product-content__img');
 
         const a = document.createElement('a');
-        a.href = 'detailed-information.html' + element.id;
+        a.href = 'detailed-information.html?id=' + element.id;
 
         const img = document.createElement('img');
         img.classList.add('picture');
@@ -190,9 +190,7 @@ function filterSearch(data, selectValue, minVal, maxVal) {
         productContentDescription.appendChild(p);
         productContentDescription.appendChild(span);
 
-    });
-
-   
+    }); 
 
 }
 
