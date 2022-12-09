@@ -85,8 +85,7 @@ request({
             featuresOff.appendChild(li);
 
         });
-        //<i class="fa-duotone fa-xmark"></i>
-
+    
 
         const contact = document.createElement('div');
         contact.classList.add('contact');
@@ -126,7 +125,6 @@ request({
         detailedInformationContent.appendChild(h4);
         detailedInformationContent.appendChild(featuresOn);
         detailedInformationContent.appendChild(featuresOff);
-        // ol.appendChild(li);
         contactsInfo.appendChild(contact);
         contact.appendChild(contactName);
         contact.appendChild(contactText);
