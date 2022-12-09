@@ -22,8 +22,6 @@ button.addEventListener('click', () => {
 inputIn.forEach(
     item => item.addEventListener('keydown', function (event) {
 
-        btn.disabled = false;
-
         let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'Backspace', 'Delete'];
         const key = event.key;
         if (arr.includes(key)) {
@@ -39,18 +37,22 @@ inputIn.forEach(
 
 const section = document.querySelector('.product-content');
 
-const OFFERS = 'https://skyrent-server.ru/offers/';
+const OFFERS = 'https://skyrent-server.ru';
 
 
 request({
 
-    url: OFFERS,
+    url: `${OFFERS}/offers`,
 
     onSuccess: (data) => {
+        //  uniq = uniqueLocations(data);
+        // console.log(uniq);
         render(data);
         console.log(data);
     }
 })
+
+
 
 function render(item) {
     item.forEach(element => {
@@ -96,7 +98,7 @@ function render(item) {
 
 request({
 
-    url: OFFERS,
+    url: `${OFFERS}/locations`,
 
     onSuccess: (data) => {
         renderSelect(data);
@@ -108,8 +110,13 @@ function renderSelect(data) {
         const option = document.createElement('option');
         option.textContent = (element.country + ' ' + '→' + ' ' + element.city);
         select.appendChild(option);
+
     });
 }
+
+
+
+
 
 const picture = document.querySelector('.picture');
 
@@ -130,7 +137,7 @@ btn.addEventListener('click', (event) => {
 
 
     request({
-        url: OFFERS,
+        url: `${OFFERS}/offers`,
         onSuccess: (data) => {
 
             filterSearch(data, selectValue, minVal, maxVal);
@@ -190,7 +197,7 @@ function filterSearch(data, selectValue, minVal, maxVal) {
         productContentDescription.appendChild(p);
         productContentDescription.appendChild(span);
 
-    }); 
+    });
 
 }
 

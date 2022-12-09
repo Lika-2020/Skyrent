@@ -63,11 +63,30 @@ request({
         h4.classList.add('detailed-information__title');
         h4.textContent = 'Что есть внутри?';
 
-        const ol = document.createElement('ol');
-        ol.classList.add('hidden');
+        const featuresOn = document.createElement('ol');
+        featuresOn.classList.add('hidden');
 
-        const li = document.createElement('li');
-        li.textContent = data.features_on;
+        features_on_data = data.features_on;
+        features_on_data.forEach(element => {
+            let li = document.createElement('li');
+            li.classList.add('active');
+            li.textContent = element;
+            featuresOn.appendChild(li);
+        });
+
+        const featuresOff = document.createElement('ol');
+        featuresOff.classList.add('hidden');
+
+        features_off_data = data.features_off;
+        features_off_data.forEach(element => {
+            let li = document.createElement('li');
+            li.classList.add('disabled');
+            li.textContent = element;
+            featuresOff.appendChild(li);
+
+        });
+        //<i class="fa-duotone fa-xmark"></i>
+
 
         const contact = document.createElement('div');
         contact.classList.add('contact');
@@ -105,8 +124,9 @@ request({
         productContentImg.appendChild(img);
         sectionDetailedInformation.appendChild(detailedInformationContent);
         detailedInformationContent.appendChild(h4);
-        detailedInformationContent.appendChild(ol);
-        ol.appendChild(li);
+        detailedInformationContent.appendChild(featuresOn);
+        detailedInformationContent.appendChild(featuresOff);
+        // ol.appendChild(li);
         contactsInfo.appendChild(contact);
         contact.appendChild(contactName);
         contact.appendChild(contactText);

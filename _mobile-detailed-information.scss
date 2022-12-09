@@ -11,6 +11,7 @@ a {
     color: #000000;
 }
 
+
 .img-content {
 
     width: 330px;
@@ -136,13 +137,13 @@ a {
 
     
 
-    ol>li {
+    li {
         padding-left: 33px;
         position: relative;
         margin: 10px;
     }
 
-    li {
+    .active {
         background-image: url(./img/tick.svg);
         background-repeat: no-repeat;
         background-position: left;
@@ -157,7 +158,18 @@ a {
     }
 
     .disabled {
-        color: #D9D9D9;
+        color:  #727883;
+        background-image: url(./img/disabled.svg);
+        background-repeat: no-repeat;
+        background-position: left;
+        top: 0;
+        right: 0;
+        font-family: 'Arial';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+
     }
 
     .detailed-information {
